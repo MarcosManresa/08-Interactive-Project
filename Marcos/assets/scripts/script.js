@@ -16,7 +16,7 @@ function sellerUpdateBest(timeBestSellerNY) {
     var lister = 
         '<div id="' + book.rank + '" class="entering">' + 
           '<p>' + 
-          '<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/387928/book%20placeholder.png" class="book-cover" id="cover-' + book.rank + '">' + 
+          '<img src="" class="book-cover" id="cover-' + book.rank + '">' + 
           '</p>' + 
           '<h2><a href="' + book.amazon_product_url + '" target="_blank">' + infoBook.title + '</a></h2>' +
           '<h4>By ' + infoBook.author + '</h4>' +
