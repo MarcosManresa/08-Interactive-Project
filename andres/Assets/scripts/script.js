@@ -49,8 +49,8 @@ function coverUpdate(id, ispn) {
 }
 
 $(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
-    if (scroll > 50) {
+    var scrall = $(window).scrollTop();
+    if (scrall > 50) {
         $('#header').css({ 'height': '50', 'padding': '8' })
         $('#seller').css({ 'height': '33' })
     } else {
