@@ -1,4 +1,4 @@
-fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-fiction&api-key=ws8GCe1aphzNxJzCmgXm8Ks1Yigf6hzH' , {
+fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=paperback-nonfiction&api-key=ws8GCe1aphzNxJzCmgXm8Ks1Yigf6hzH' , {
     method: 'get',
   })
   .then(response => { return response.json(); })
@@ -10,7 +10,6 @@ fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=hardcover-ficti
 function sellerUpdateBest(timeBestSellerNY) {
   timeBestSellerNY.results.forEach(function(book) {
     var ispn = book.isbns[0].isbn10;
-    var weekRankLast = book.rank_last_week || 'n/a';
     var infoBook = book.book_details[0];
     var listOnWeek = book.weeks_on_list || 'New this week!';
     var lister = 
@@ -24,7 +23,6 @@ function sellerUpdateBest(timeBestSellerNY) {
           '<p>' + infoBook.description + '</p>' + 
           '<div class="stats">' +
             '<hr>' + 
-            '<p>Last Week: ' + weekRankLast + '</p>' + 
             '<p>Weeks on list: ' + listOnWeek + '</p>' +
           '</div>' +
         '</div>';
