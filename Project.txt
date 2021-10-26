@@ -1,0 +1,5 @@
+Api Key Google Books = 
+AIzaSyBQBCmhdekqOTFw7YuHxyBpjSs4kyH5hrE
+
+New York Times Api Key = 
+ws8GCe1aphzNxJzCmgXm8Ks1Yigf6hzH 
