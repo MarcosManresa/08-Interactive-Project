@@ -16,12 +16,12 @@
     --font-family: Arvo;
 }
 
-#seller-best-title {
+#ye-ye {
     max-width: 475px;
     margin: 120px auto;
   }
   
-  #seller-best-title a {
+  #ye-ye a {
     /* margin: 40px 0px 0px 0px; */
     /* text-decoration: none; */
     /* color: #2b90d9; */
@@ -29,32 +29,32 @@
     font-family: var(--font-family);
   }
   
-  #seller-best-title h1, #seller-best-title h2, #seller-best-title h3, #seller-best-title h4 {
+  #ye-ye h1, #ye-ye h2, #ye-ye h3, ye-ye h4 {
     color: #282c37;
   }
   
-  #seller-best-title p {
+  #ye-ye p {
     /* color: #333030; */
     /* line-height: 1.4; */
     font-family: var(--font-family);
   }
   
-  #seller-best-title .publisher {
+  #ye-ye .publisher {
     /* color: #333030; */
     font-family: var(--font-family);
   }
   
-  #seller-best-title .stats hr {
+  #ye-ye .stater hr {
     /* opacity: .5; */
   }
   
-  #seller-best-title .stats p {
+  #ye-ye .stater p {
     /* color: #282c37; */
     font-family: var(--font-family);
   }
   
   
-  .book-cover {
+  .yure-book {
     /* display: block; */
     margin: 0 auto;
     /* width: 200px; */
@@ -62,16 +62,16 @@
             transform: translateY(-30px);
   }
 
-  .entering {
+  .entice {
     /* margin: 30px 0px; */
     /* padding: 20px 50px; */
     -webkit-box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.21);
     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.21);
   }
 
-  .entering:before {
+  .entice:before {
     box-sizing:content-box;
-    content: attr(nyt-rank);
+    content: attr(rnk-nyp);
     font-family: Arvo;
     font-size: 3rem;
     -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.21);
@@ -90,7 +90,7 @@
     color: #282c37;
   }
 
-  #header{
+  #ok-hd{
     /* top: 0; */
     /* left: 0; */
     /* background: #FFF; */
@@ -104,7 +104,7 @@
     /* opacity: 70%; */
   }
 
-  #header p {
+  #ok-hd p {
       display: flex;
       background-color: white;
       justify-content: center;

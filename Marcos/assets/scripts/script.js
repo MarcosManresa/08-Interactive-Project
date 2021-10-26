@@ -3,47 +3,47 @@ fetch('https://api.nytimes.com/svc/books/v3/lists.json?list-name=paperback-nonfi
 })
     .then(response => { return response.json(); })
     .then(json => {
-        sellerUpdateBest(json);
+        bestUpdate(json);
         console.log(json);
     })
 
-function sellerUpdateBest(timeBestSellerNY) {
-    $('#seller-best-title').empty();
-    timeBestSellerNY.results.forEach(function (book) {
-        var ispn = book.isbns[0].isbn10;
-        var infoBook = book.book_details[0];
-        var listOnWeek = book.weeks_on_list || 'New this week!';
-        var lister =
-            '<div id="' + book.rank + '" class="entering bg-yellow-100 p-5 p-12 mt-7 mr-0">' +
+function bestUpdate(yeThisTheSellingBest) {
+    $('#ye-ye').empty();
+    yeThisTheSellingBest.results.forEach(function (book) {
+        var internationalStand = book.isbns[0].isbn10;
+        var bokInfo = book.book_details[0];
+        var wekList = book.weeks_on_list || 'New this week!';
+        var ok =
+            '<div id="' + book.rank + '" class="entice bg-yellow-100 p-5 p-12 mt-7 mr-0">' +
             '<p>' +
-            '<img src="" class="book-cover block m-0 mr-auto w-48" id="cover-' + book.rank + '">' +
+            '<img src="" class="yure-book block m-0 mr-auto w-48" id="ye-cov' + book.rank + '">' +
             '</p>' +
-            '<h2><a href class= "mt-10 mr-0 mb-0 ml-0 no-underline text-blue-600 leading-3"="' + book.amazon_product_url + '" target="_blank">' + infoBook.title + '</a></h2>' +
-            '<h4>By ' + infoBook.author + '</h4>' +
-            '<h4 class="publisher text-gray-800">' + infoBook.publisher + '</h4>' +
-            '<p class="text-gray-800 leading-normal">' + infoBook.description + '</p>' +
-            '<div class="stats">' +
+            '<h2><a class= "mt-10 mr-0 mb-0 ml-0 no-underline text-blue-600 leading-3"=" href="' + book.amazon_product_url + '" target="_blank">' + bokInfo.title + '</a></h2>' +
+            '<h4>By ' + bokInfo.author + '</h4>' +
+            '<h4 class="publisher text-gray-800">' + bokInfo.publisher + '</h4>' +
+            '<p class="text-gray-800 leading-normal">' + bokInfo.description + '</p>' +
+            '<div class="stater">' +
             '<hr class="opacity-50">' +
-            '<p class="text-gray-700">Weeks on list: ' + listOnWeek + '</p>' +
+            '<p class="text-gray-700">Weeks on list: ' + wekList + '</p>' +
             '</div>' +
             '</div>';
 
-        $('#seller-best-title').append(lister);
-        $('#' + book.rank).attr('nyt-rank', book.rank);
+        $('#ye-ye').append(ok);
+        $('#' + book.rank).attr('rnk-nyp', book.rank);
 
-        coverUpdate(book.rank, ispn);
+        coverUpdate(book.rank, internationalStand);
     });
 }
 
-function coverUpdate(id, ispn) {
-    fetch('https://www.googleapis.com/books/v1/volumes?q=isbn ' + ispn, {
+function coverUpdate(id, internationalStand) {
+    fetch('https://www.googleapis.com/books/v1/volumes?q=isbn ' + internationalStand, {
         method: 'get'
     })
         .then(response => { return response.json(); })
         .then(data => {
-            var image = data.items[0].volumeInfo.imageLinks.thumbnail;
-            image = image.replace(/^http:\/\//i, 'https://');
-            $('#cover-' + id).attr('src', image);
+            var picture = data.items[0].volumeInfo.imageLinks.thumbnail;
+            picture = picture.replace(/^http:\/\//i, 'https://');
+            $('#ye-cov' + id).attr('src', picture);
         })
 
 }
@@ -51,10 +51,10 @@ function coverUpdate(id, ispn) {
 $(window).scroll(function (event) {
     var scrall = $(window).scrollTop();
     if (scrall > 50) {
-        $('#header').css({ 'height': '50', 'padding': '8' })
-        $('#seller').css({ 'height': '33' })
+        $('#ok-hd').css({ 'height': '50', 'padding': '8' })
+        $('#ye-sellng').css({ 'height': '33' })
     } else {
-        $('#header').css({ 'height': '100', 'padding': '10' })
-        $('#seller').css({ 'height': '80' })
+        $('#ok-hd').css({ 'height': '100', 'padding': '10' })
+        $('#ye-sellng').css({ 'height': '80' })
     }
 })
