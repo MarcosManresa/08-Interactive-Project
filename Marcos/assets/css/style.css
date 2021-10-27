@@ -14,13 +14,14 @@
 
 :root{
     --font-family: Arvo;
-}
-
-#seller-best-title {
-    max-width: 475px;
-    margin: 120px auto;
   }
-  
+
+
+  #seller-best-title {
+    margin: 100px auto;
+    width: 100%;
+  } 
+
   #seller-best-title a {
     margin: 40px 0px 0px 0px;
     text-decoration: none;
